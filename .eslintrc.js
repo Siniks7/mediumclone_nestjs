@@ -21,5 +21,25 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    'react-hooks/exhaustive-deps': "off",
+		'prettier/prettier': [
+			'error',
+			{
+				"singleQuote": true,
+				"useTabs": true,
+				"semi": true,
+				"trailingComma": "all",
+				"bracketSpacing": true,
+				"printWidth": 100,
+				"endOfLine": "auto"
+			}
+		],
+		"@typescript-eslint/no-empty-function": [
+			"off"
+		],
+		"@typescript-eslint/interface-name-prefix": "off",
+		"@typescript-eslint/ban-types": "off",
+		"@typescript-eslint/explicit-function-return-type": "off",
+		"@typescript-eslint/explicit-module-boundary-types": "off"
   },
 };
