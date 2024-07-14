@@ -1,14 +1,16 @@
-/* eslint-disable prettier/prettier */
 /*
 https://docs.nestjs.com/controllers#controllers
 */
 
 import { Controller, Post } from '@nestjs/common';
+import { UserService } from './user.service';
 
 @Controller()
 export class UserController {
-    @Post('users')
-    async createUser(): Promise<any> {
-        return "create user";
-    }
+  constructor(private readonly userService: UserService) {}
+  @Post('users')
+  async createUser() {
+    const users = await this.userService.createUser();
+    return users;
+  }
 }

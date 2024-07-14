@@ -6,4 +6,8 @@ https://docs.nestjs.com/providers#services
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
-export class UserService {}
+export class UserService {
+    async createUser() {
+        return "create user";
+    }
+}
