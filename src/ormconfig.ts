@@ -1,6 +1,7 @@
 import { ConnectionOptions } from 'typeorm';
-import { TagEntity } from './tag/tag.entity';
+import { CreateTags1720936120572 } from './migrations/1720936120572-CreateTags';
 
+// __dirname + '/migrations/**/*{.ts,.js}
 const config: ConnectionOptions = {
   type: 'postgres',
   host: 'localhost',
@@ -8,9 +9,9 @@ const config: ConnectionOptions = {
   username: 'mediumclone',
   password: '434543',
   database: 'mediumclone',
-  entities: [__dirname + '/**/*.entity{.ts,.js}', TagEntity],
+  entities: ['./**/*.entity{.ts,.js}'],
   synchronize: false,
-  migrations: [__dirname + '/migrations/**/*{.ts,.js}'],
+  migrations: [CreateTags1720936120572],
   cli: {
     migrationsDir: 'src/migrations',
   },
