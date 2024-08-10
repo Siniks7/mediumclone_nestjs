@@ -79,7 +79,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"user\": {\r\n        \"password\": \"123456\",\r\n        \"email\": \"vp1@ya.ru\"\r\n    }\r\n}",
+					"raw": "{\r\n    \"user\": {\r\n        \"password\": \"123456\",\r\n        \"email\": \"nik@yandex.ru\"\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -155,6 +155,265 @@
 					"port": "3000",
 					"path": [
 						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create article",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEsInVzZXJuYW1lIjoiVmFzeWEyIiwiZW1haWwiOiJ2cDExQHlhLnJ1IiwiaWF0IjoxNzIyNzUxMDAwLCJleHAiOjE3MjI3NTE2MDB9.k8MQwlq_A04pn7XhUgJuO53Yr-rRqMBkm6tnbg5pzu4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"article\": {\r\n        \"title\": \"Learning programming\",\r\n        \"description\": \"Hard skills\",\r\n        \"body\": \"You have to try\",\r\n        \"tagList\": [\"reactjs\", \"angularjs\"]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/articles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get article",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEsInVzZXJuYW1lIjoiVmFzeWEyIiwiZW1haWwiOiJ2cDExQHlhLnJ1IiwiaWF0IjoxNzIxNTYzODQ1LCJleHAiOjE3MjE1NjQ0NDV9.7QFZEBBrL__rtpimJ9sff9jxMhoGWeykXRRqw01vVLw",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/articles/how-to-train-your-dragon-gr26bz",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articles",
+						"how-to-train-your-dragon-gr26bz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete article",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEsInVzZXJuYW1lIjoiVmFzeWEyIiwiZW1haWwiOiJ2cDExQHlhLnJ1IiwiaWF0IjoxNzIyNDM2ODU0LCJleHAiOjE3MjI0Mzc0NTR9.ZT2RaxfDmmCny-t8IQX8JK7xcGkmX3_HONVN71AbhCU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/articles/how-to-train-your-dragon-te80n3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articles",
+						"how-to-train-your-dragon-te80n3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update article",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEsInVzZXJuYW1lIjoiVmFzeWEyIiwiZW1haWwiOiJ2cDExQHlhLnJ1IiwiaWF0IjoxNzIyNDM2ODU0LCJleHAiOjE3MjI0Mzc0NTR9.ZT2RaxfDmmCny-t8IQX8JK7xcGkmX3_HONVN71AbhCU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"article\": {\r\n        \"title\": \"How to train your dragon?\",\r\n        \"description\": \"Ever wonder how?\",\r\n        \"body\": \"You have to believe!\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/articles/how-to-train-your-dragon-gr26bz",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articles",
+						"how-to-train-your-dragon-gr26bz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all articles",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjIsInVzZXJuYW1lIjoiTmlrb2xheSIsImVtYWlsIjoibmlrQHlhbmRleC5ydSIsImlhdCI6MTcyMjc1MTgzNiwiZXhwIjoxNzIyNzUyNDM2fQ.y367t3OtSQ0s9YXsa6FgfE6Xq6o-LQ4JX-_XqpFmdk0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/articles/?tag=programming",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articles",
+						""
+					],
+					"query": [
+						{
+							"key": "tag",
+							"value": "programming"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "like article",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjIsInVzZXJuYW1lIjoiTmlrb2xheSIsImVtYWlsIjoibmlrQHlhbmRleC5ydSIsImlhdCI6MTcyMzIxMTM1NCwiZXhwIjoxNzIzMjExOTU0fQ.LwH1njOeUeiciZteeH2NjXflIaZd0KnBHNjMN-LlFFI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"article\": {\r\n        \"title\": \"How to train your dragon?\",\r\n        \"description\": \"Ever wonder how?\",\r\n        \"body\": \"You have to believe!\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/articles/how-to-train-your-dragon-gr26bz/favorite",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articles",
+						"how-to-train-your-dragon-gr26bz",
+						"favorite"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dislike article",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjIsInVzZXJuYW1lIjoiTmlrb2xheSIsImVtYWlsIjoibmlrQHlhbmRleC5ydSIsImlhdCI6MTcyMzIxMTM1NCwiZXhwIjoxNzIzMjExOTU0fQ.LwH1njOeUeiciZteeH2NjXflIaZd0KnBHNjMN-LlFFI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/articles/how-to-train-your-dragon-gr26bz/favorite",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articles",
+						"how-to-train-your-dragon-gr26bz",
+						"favorite"
 					]
 				}
 			},
