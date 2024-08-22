@@ -51,7 +51,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"user\": {\r\n        \"username\": \"Vasya1\",\r\n        \"password\": \"123456\",\r\n        \"email\": \"vp1@ya.ru\"\r\n    }\r\n}",
+					"raw": "{\r\n    \"user\": {\r\n        \"username\": \"Nikolay\",\r\n        \"password\": \"123456\",\r\n        \"email\": \"nik@yandex.ru\"\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -313,7 +313,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjIsInVzZXJuYW1lIjoiTmlrb2xheSIsImVtYWlsIjoibmlrQHlhbmRleC5ydSIsImlhdCI6MTcyMjc1MTgzNiwiZXhwIjoxNzIyNzUyNDM2fQ.y367t3OtSQ0s9YXsa6FgfE6Xq6o-LQ4JX-_XqpFmdk0",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjIsInVzZXJuYW1lIjoiTmlrb2xheSIsImVtYWlsIjoibmlrQHlhbmRleC5ydSIsImlhdCI6MTcyMzI2MzQ1NiwiZXhwIjoxNzIzMjY0MDU2fQ.-bXJM9IRrtlgkleV6kicyLTecU7A0rutcW7CeNI7l1A",
 						"type": "text"
 					}
 				],
@@ -327,7 +327,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/articles/?tag=programming",
+					"raw": "http://localhost:3000/articles/",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -336,12 +336,6 @@
 					"path": [
 						"articles",
 						""
-					],
-					"query": [
-						{
-							"key": "tag",
-							"value": "programming"
-						}
 					]
 				}
 			},
@@ -354,13 +348,13 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjIsInVzZXJuYW1lIjoiTmlrb2xheSIsImVtYWlsIjoibmlrQHlhbmRleC5ydSIsImlhdCI6MTcyMzIxMTM1NCwiZXhwIjoxNzIzMjExOTU0fQ.LwH1njOeUeiciZteeH2NjXflIaZd0KnBHNjMN-LlFFI",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjIsInVzZXJuYW1lIjoiTmlrb2xheSIsImVtYWlsIjoibmlrQHlhbmRleC5ydSIsImlhdCI6MTcyMzI2MzQ1NiwiZXhwIjoxNzIzMjY0MDU2fQ.-bXJM9IRrtlgkleV6kicyLTecU7A0rutcW7CeNI7l1A",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"article\": {\r\n        \"title\": \"How to train your dragon?\",\r\n        \"description\": \"Ever wonder how?\",\r\n        \"body\": \"You have to believe!\"\r\n    }\r\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -390,7 +384,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjIsInVzZXJuYW1lIjoiTmlrb2xheSIsImVtYWlsIjoibmlrQHlhbmRleC5ydSIsImlhdCI6MTcyMzIxMTM1NCwiZXhwIjoxNzIzMjExOTU0fQ.LwH1njOeUeiciZteeH2NjXflIaZd0KnBHNjMN-LlFFI",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjIsInVzZXJuYW1lIjoiTmlrb2xheSIsImVtYWlsIjoibmlrQHlhbmRleC5ydSIsImlhdCI6MTcyMzI2MzQ1NiwiZXhwIjoxNzIzMjY0MDU2fQ.-bXJM9IRrtlgkleV6kicyLTecU7A0rutcW7CeNI7l1A",
 						"type": "text"
 					}
 				],
@@ -414,6 +408,154 @@
 						"articles",
 						"how-to-train-your-dragon-gr26bz",
 						"favorite"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJOaWtvbGF5IiwiZW1haWwiOiJuaWtAeWFuZGV4LnJ1IiwiaWF0IjoxNzI0MzEwMzQ5LCJleHAiOjE3MjQzMTA5NDl9.zBfm-wo5hLqNKe8HvI9mpY6s47P-W75zthOQ2dqbcfk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/profiles/bar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"profiles",
+						"bar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Follow profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJOaWtvbGF5IiwiZW1haWwiOiJuaWtAeWFuZGV4LnJ1IiwiaWF0IjoxNzI0MzEwMzQ5LCJleHAiOjE3MjQzMTA5NDl9.zBfm-wo5hLqNKe8HvI9mpY6s47P-W75zthOQ2dqbcfk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/profiles/bar/follow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"profiles",
+						"bar",
+						"follow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unfollow profile",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJOaWtvbGF5IiwiZW1haWwiOiJuaWtAeWFuZGV4LnJ1IiwiaWF0IjoxNzI0MzA4NDQyLCJleHAiOjE3MjQzMDkwNDJ9.cOqPFslL4FqTLK6KmGIvQL01HcXSXqDRWYctx5mv0iU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/profiles/bar/follow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"profiles",
+						"bar",
+						"follow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Current feed",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJOaWtvbGF5IiwiZW1haWwiOiJuaWtAeWFuZGV4LnJ1IiwiaWF0IjoxNzI0MzEwOTE4LCJleHAiOjE3MjQzMTE1MTh9.GC_H6ohxfaU5_wsN6CNzdCV-qXd4FTp9gn4FGjynv9Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/articles/feed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articles",
+						"feed"
 					]
 				}
 			},
