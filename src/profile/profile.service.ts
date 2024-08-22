@@ -15,7 +15,7 @@ export class ProfileService {
     private readonly followRepository: Repository<FollowEntity>
   ) {}
 
-  async getProfile(profileUsername: string): Promise<ProfileType> {
+  async getProfile(CurrentUser, profileUsername: string): Promise<ProfileType> {
     const user = await this.userRepository.findOne({
       username: profileUsername
     });
@@ -24,7 +24,15 @@ export class ProfileService {
       throw new HttpException('Profile does not exist', HttpStatus.NOT_FOUND);
     }
 
-    return { ...user, following: false };
+    const myId =
+      CurrentUser !== null && CurrentUser !== undefined ? CurrentUser.id : null;
+
+    const follow = await this.followRepository.findOne({
+      followerId: myId,
+      followingId: user.id
+    });
+
+    return { ...user, following: Boolean(follow) };
   }
 
   async followProfile(

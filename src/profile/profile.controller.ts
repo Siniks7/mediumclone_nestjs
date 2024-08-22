@@ -1,5 +1,6 @@
 import { User } from '@app/user/decorators/user.decorator';
 import { AuthGuard } from '@app/user/guards/auth.guard';
+import { UserEntity } from '@app/user/user.entity';
 import {
   Controller,
   Delete,
@@ -17,9 +18,13 @@ export class ProfileController {
 
   @Get(':username')
   async getProfile(
+    @User() CurrentUser: UserEntity,
     @Param('username') profileUsername: string
   ): Promise<ProfileResponseInterface> {
-    const profile = await this.profileService.getProfile(profileUsername);
+    const profile = await this.profileService.getProfile(
+      CurrentUser,
+      profileUsername
+    );
     return this.profileService.buildProfileResponse(profile);
   }
 
